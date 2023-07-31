@@ -45,4 +45,3 @@ for (const index in most12) {
   }
   wordCloud.appendChild(div);
 }
-//
