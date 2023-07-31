@@ -1,21 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 #myWordCloud {
   width: 100%;
   margin-top: 124px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.first {
-  color: rgb(59, 96, 59);
 
+.first {
+  color: rgb(0, 0, 0);
+  grid-column: span 3;
   font-size: 64px;
+  width: max-content;
 }
 .second {
   font-size: 60px;
-  color: lightblue;
+  grid-row: span 3;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 .third {
   font-size: 54px;
+
   color: red;
 }
 .other {
   font-size: 48px;
   color: rgb(148, 57, 57);
+}
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  grid-row: span 2;
+}
+#myWordCloud div {
+  width: auto;
+  height: auto;
+}
+@supports (text-orientation: upright) {
+  .second {
+    color: greenyellow;
+  }
+  .vertical {
+    font-size: 36px;
+    color: brown;
+  }
 }

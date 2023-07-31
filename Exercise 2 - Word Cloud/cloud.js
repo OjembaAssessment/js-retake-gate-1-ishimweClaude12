@@ -23,4 +23,26 @@ console.log(most12);
 // Select the cloud div
 const wordCloud = document.getElementById("myWordCloud");
 
+//Loop through most12 words and Create a div element, add the word and style for that div
+
+for (const index in most12) {
+  const div = document.createElement("div"); //Create a div Element
+  if (index == 0) {
+    div.classList.add("first");
+    div.innerText = most12[index];
+  } else if (index == 1) {
+    div.classList.add("second");
+    div.innerText = most12[index];
+  } else if (index == 2) {
+    div.classList.add("third");
+    div.innerText = most12[index];
+  } else if (index % 3 == 0) {
+    div.classList.add("vertical");
+    div.innerText = most12[index];
+  } else {
+    div.classList.add("other");
+    div.innerText = most12[index];
+  }
+  wordCloud.appendChild(div);
+}
 //
