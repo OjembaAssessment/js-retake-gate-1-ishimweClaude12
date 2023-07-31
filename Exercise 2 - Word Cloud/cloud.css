@@ -1,4 +1,21 @@
 #myWordCloud {
-    color: red;
-    font-size: 64px;
+  width: 100%;
+  margin-top: 124px;
+}
+.first {
+  color: rgb(59, 96, 59);
+
+  font-size: 64px;
+}
+.second {
+  font-size: 60px;
+  color: lightblue;
+}
+.third {
+  font-size: 54px;
+  color: red;
+}
+.other {
+  font-size: 48px;
+  color: rgb(148, 57, 57);
 }
